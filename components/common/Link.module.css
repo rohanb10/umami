@@ -14,7 +14,7 @@ a.link:before {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background: var(--snoozzPink);
+  background: var(--primary400);
   opacity: 0.5;
   transition: width 100ms;
 }
