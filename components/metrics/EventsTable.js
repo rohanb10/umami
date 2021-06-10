@@ -31,9 +31,9 @@ export default function EventsTable({ websiteId, ...props }) {
       )}
       <MetricsTable
         {...props}
-        title={<FormattedMessage id="metrics.events" defaultMessage="Events" />}
+        title={<FormattedMessage id="metrics.events" defaultMessage="Choice" />}
         type="event"
-        metric={<FormattedMessage id="metrics.actions" defaultMessage="Actions" />}
+        metric={<FormattedMessage id="metrics.actions" defaultMessage="Clicks" />}
         websiteId={websiteId}
         dataFilter={eventTypeFilter}
         filterOptions={eventType === EVENT_FILTER_DEFAULT.value ? [] : [eventType]}
@@ -48,7 +48,6 @@ const Label = ({ value }) => {
   const [event, label] = value.split('\t');
   return (
     <>
-      <Tag>{event}</Tag>
       {label}
     </>
   );
