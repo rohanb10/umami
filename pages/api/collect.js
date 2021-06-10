@@ -38,18 +38,30 @@ export default async (req, res) => {
   await useSession(req, res);
 
   const { type, payload } = req.body;
+  const valid_options = [
+    "On Next Startup",
+    "In One Hour",
+    "This Morning",
+    "This Evening",
+    "Tomorrow Morning",
+    "Tomorrow Evening",
+    "Weekend",
+    "Next Monday",
+    "Next Week",
+    "Next Month",
+    "Choose your own time"
+  ];
   const {
     session: { website_id, session_id },
   } = req;
 
-  if (type === 'pageview') {
-    const { url, referrer } = payload;
-
-    await savePageView(website_id, session_id, url, referrer);
-  } else if (type === 'event') {
+  if (type === 'event') {
     const { url, event_type, event_value } = payload;
-
-    await saveEvent(website_id, session_id, url, event_type, event_value);
+    if (typeof event_value == 'string' && event_value.length && !valid_options.includes(event_value)) {
+      await saveEvent(website_id, session_id, url, event_type, event_value);  
+    } else {
+      return badRequest(res);
+    }
   } else {
     return badRequest(res);
   }

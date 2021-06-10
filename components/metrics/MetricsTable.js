@@ -51,7 +51,8 @@ export default function MetricsTable({
   );
 
   const filteredData = useMemo(() => {
-    if (data) {
+    console.log(data);
+    if (type, data) {
       const items = percentFilter(dataFilter ? dataFilter(data, filterOptions) : data);
       if (limit) {
         return items.filter((e, i) => i < limit).sort(firstBy('y', -1).thenBy('x'));

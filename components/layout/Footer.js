@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="col-12 col-md-4">
           <FormattedMessage
             id="message.powered-by"
-            defaultMessage="Built on top of {name}"
+            defaultMessage="Built with {name}"
             values={{
               name: (
                 <Link href="https://umami.is">

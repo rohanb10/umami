@@ -32,15 +32,10 @@ export default function Header() {
         <div className={styles.nav}>
           <div className="">
             <div className={styles.title}>
-              <Icon icon={<Logo />} size="large" className={styles.logo} />
+              <Icon icon={<Logo />} size="xlarge" className={styles.logo} />
               <Link href={user ? '/' : 'https://snoozz.me'}>Snoozz Click Stats</Link>
             </div>
           </div>
-          <Button
-            className={styles.burger}
-            icon={active ? <XMark /> : <Bars />}
-            onClick={handleClick}
-          />
           {user && (
             <div className={styles.items}>
               <div className={active ? classNames(styles.active) : ''}>
