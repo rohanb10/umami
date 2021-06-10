@@ -9,7 +9,7 @@ import ThemeButton from 'components/settings/ThemeButton';
 import UpdateNotice from 'components/common/UpdateNotice';
 import UserButton from 'components/settings/UserButton';
 import Button from 'components/common/Button';
-import Logo from 'assets/snoz.svg';
+import Logo from 'assets/snoozz.svg';
 import styles from './Header.module.css';
 import useLocale from 'hooks/useLocale';
 import { rtlLocales } from 'lib/lang';
@@ -33,7 +33,7 @@ export default function Header() {
           <div className="">
             <div className={styles.title}>
               <Icon icon={<Logo />} size="large" className={styles.logo} />
-              <Link href={user ? '/' : 'https://umami.is'}>umami</Link>
+              <Link href={user ? '/' : 'https://snoozz.me'}>Click Stats</Link>
             </div>
           </div>
           <Button
@@ -60,7 +60,6 @@ export default function Header() {
             <div className={active ? classNames(styles.active) : ''}>
               <div className={styles.buttons}>
                 <ThemeButton />
-                <LanguageButton menuAlign="right" />
                 {user && <UserButton />}
               </div>
             </div>

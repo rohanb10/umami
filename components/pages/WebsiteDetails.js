@@ -108,75 +108,15 @@ export default function WebsiteDetails({ websiteId }) {
 
   return (
     <Page>
-      <div className="row">
-        <div className={classNames(styles.chart, 'col')}>
-          <WebsiteChart
-            websiteId={websiteId}
-            title={data.name}
-            domain={data.domain}
-            onDataLoad={handleDataLoad}
-            showLink={false}
-            stickyHeader
-          />
-        </div>
-      </div>
-      {!chartLoaded && <Loading />}
-      {chartLoaded && !view && (
-        <GridLayout>
-          <GridRow>
-            <GridColumn md={12} lg={6}>
-              <PagesTable {...tableProps} />
-            </GridColumn>
-            <GridColumn md={12} lg={6}>
-              <ReferrersTable {...tableProps} />
-            </GridColumn>
-          </GridRow>
-          <GridRow>
-            <GridColumn md={12} lg={4}>
-              <BrowsersTable {...tableProps} />
-            </GridColumn>
-            <GridColumn md={12} lg={4}>
-              <OSTable {...tableProps} />
-            </GridColumn>
-            <GridColumn md={12} lg={4}>
-              <DevicesTable {...tableProps} />
-            </GridColumn>
-          </GridRow>
-          <GridRow>
-            <GridColumn xs={12} md={12} lg={8}>
-              <WorldMap data={countryData} />
-            </GridColumn>
-            <GridColumn xs={12} md={12} lg={4}>
-              <CountriesTable {...tableProps} onDataLoad={setCountryData} />
-            </GridColumn>
-          </GridRow>
-          <GridRow className={classNames({ [styles.hidden]: !eventsData?.length > 0 })}>
-            <GridColumn xs={12} md={12} lg={4}>
-              <EventsTable {...tableProps} onDataLoad={setEventsData} />
-            </GridColumn>
-            <GridColumn xs={12} md={12} lg={8}>
-              <EventsChart className={styles.eventschart} websiteId={websiteId} />
-            </GridColumn>
-          </GridRow>
-        </GridLayout>
-      )}
-      {view && chartLoaded && (
-        <MenuLayout
-          className={styles.view}
-          menuClassName={styles.menu}
-          contentClassName={styles.content}
-          menu={menuOptions}
-        >
-          <DetailsComponent
-            {...tableProps}
-            height={500}
-            limit={false}
-            animte={false}
-            showFilters
-            virtualize
-          />
-        </MenuLayout>
-      )}
+      <GridLayout>
+        <GridRow>
+          <GridColumn md={12} lg={2}></GridColumn>
+          <GridColumn md={12} lg={8}>
+            <EventsTable {...tableProps} onDataLoad={setEventsData} />
+          </GridColumn>
+          <GridColumn md={12} lg={2}></GridColumn>
+        </GridRow>
+      </GridLayout>
     </Page>
   );
 }

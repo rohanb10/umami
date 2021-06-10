@@ -10,7 +10,7 @@ import FormLayout, {
   FormRow,
 } from 'components/layout/FormLayout';
 import Icon from 'components/common/Icon';
-import Logo from 'assets/snoz.svg';
+import Logo from 'assets/snoozz.svg';
 import styles from './LoginForm.module.css';
 import usePost from 'hooks/usePost';
 
