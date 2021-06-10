@@ -9,15 +9,11 @@ module.exports = {
   basePath: process.env.BASE_PATH,
   webpack(config) {
     config.module.rules.push({
-      test: /\.svg$/,
+      test: /\.(svg|png)$/,
       issuer: {
         test: /\.js$/,
       },
       use: ['@svgr/webpack'],
-    });
-    config.module.rules.push( {
-      test: /\.(png|jpe?g|gif)$/i,
-      use: [{loader: 'file-loader'}],
     });
 
     return config;
