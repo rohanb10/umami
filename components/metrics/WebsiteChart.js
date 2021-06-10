@@ -76,7 +76,10 @@ export default function WebsiteChart({
           enabled={stickyHeader}
         >
           {url && <PageFilter url={url} onClick={handleCloseFilter} />}
-          <div className={classNames(styles.filter, 'col-12 col-lg-12')}>
+          <div className="col-12 col-lg-9">
+            <MetricsBar websiteId={websiteId} />
+          </div>
+          <div className={classNames(styles.filter, 'col-12 col-lg-3')}>
             <DateFilter
               value={value}
               startDate={startDate}
