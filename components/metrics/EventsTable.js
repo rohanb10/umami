@@ -31,9 +31,9 @@ export default function EventsTable({ websiteId, ...props }) {
       )}
       <MetricsTable
         {...props}
-        title={<FormattedMessage id="metrics.events" defaultMessage="Choice" />}
+        title="Choice"
         type="event"
-        metric={<FormattedMessage id="metrics.actions" defaultMessage="Count" />}
+        metric="Count"
         websiteId={websiteId}
         dataFilter={eventTypeFilter}
         filterOptions={eventType === EVENT_FILTER_DEFAULT.value ? [] : [eventType]}

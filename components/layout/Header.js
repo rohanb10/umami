@@ -33,7 +33,7 @@ export default function Header() {
           <div className="">
             <div className={styles.title}>
               <Icon icon={<Logo />} size="large" className={styles.logo} />
-              <Link href={user ? '/' : 'https://snoozz.me'}>Click Stats</Link>
+              <Link href={user ? '/' : 'https://snoozz.me'}>Snoozz Click Stats</Link>
             </div>
           </div>
           <Button
@@ -56,14 +56,6 @@ export default function Header() {
               </div>
             </div>
           )}
-          <div className={styles.items}>
-            <div className={active ? classNames(styles.active) : ''}>
-              <div className={styles.buttons}>
-                <ThemeButton />
-                {user && <UserButton />}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </nav>

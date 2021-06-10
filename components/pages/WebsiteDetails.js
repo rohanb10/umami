@@ -110,11 +110,11 @@ export default function WebsiteDetails({ websiteId }) {
     <Page>
       <GridLayout>
         <GridRow>
-          <GridColumn md={12} lg={2}></GridColumn>
-          <GridColumn md={12} lg={8}>
+          <GridColumn md={12} lg={3}></GridColumn>
+          <GridColumn md={12} lg={6}>
             <EventsTable {...tableProps} onDataLoad={setEventsData} />
           </GridColumn>
-          <GridColumn md={12} lg={2}></GridColumn>
+          <GridColumn md={12} lg={3}></GridColumn>
         </GridRow>
       </GridLayout>
     </Page>

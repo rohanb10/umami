@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="col-12 col-md-4">
           <FormattedMessage
             id="message.powered-by"
-            defaultMessage="Powered by {name}"
+            defaultMessage="Built on top of {name}"
             values={{
               name: (
                 <Link href="https://umami.is">
@@ -27,9 +27,6 @@ export default function Footer() {
               ),
             }}
           />
-        </div>
-        <div className={classNames(styles.version, 'col-12 col-md-4')}>
-          <Link href={`https://github.com/mikecao/umami/releases`}>{`v${current}`}</Link>
         </div>
       </div>
     </footer>

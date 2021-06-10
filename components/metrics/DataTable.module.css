@@ -3,7 +3,7 @@
   height: 100%;
   font-size: var(--font-size-small);
   display: grid;
-  grid-template-rows: fit-content(100%) auto;
+  /*grid-template-rows: fit-content(100%) auto;*/
   overflow: hidden;
 }
 
@@ -80,8 +80,8 @@
 .percent {
   position: relative;
   width: 50px;
-  color: var(--gray600);
-  border-left: 1px solid var(--gray600);
+  color: var(--gray700);
+  border-left: 1px solid var(--gray500);
   padding-left: 10px;
   z-index: 1;
 }
@@ -91,7 +91,7 @@
   top: 0;
   left: 0;
   height: 30px;
-  opacity: 0.1;
-  background: var(--primary400);
+  opacity: .5;
+  background: var(--snoozzYellow);
   z-index: -1;
 }

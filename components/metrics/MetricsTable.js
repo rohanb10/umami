@@ -66,19 +66,6 @@ export default function MetricsTable({
       {!data && loading && <Loading />}
       {error && <ErrorMessage />}
       {data && !error && <DataTable {...props} data={filteredData} className={className} />}
-      <div className={styles.footer}>
-        {data && !error && limit && (
-          <Link
-            icon={<Arrow />}
-            href={router.pathname}
-            as={resolve({ view: type })}
-            size="small"
-            iconRight
-          >
-            <FormattedMessage id="label.more" defaultMessage="More" />
-          </Link>
-        )}
-      </div>
     </div>
   );
 }
