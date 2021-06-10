@@ -57,7 +57,7 @@ export default async (req, res) => {
 
   if (type === 'event') {
     const { url, event_type, event_value } = payload;
-    if (typeof event_value == 'string' && event_value.length && !valid_options.includes(event_value)) {
+    if (typeof event_value == 'string' && event_value.length && valid_options.includes(event_value)) {
       await saveEvent(website_id, session_id, url, event_type, event_value);  
     } else {
       return badRequest(res);

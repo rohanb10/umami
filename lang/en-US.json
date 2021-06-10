@@ -71,7 +71,7 @@
   "message.no-data-available": "No data available.",
   "message.no-websites-configured": "You don't have any websites configured.",
   "message.page-not-found": "Page not found.",
-  "message.powered-by": "Powered by {name}",
+  "message.powered-by": "Built with {name}",
   "message.save-success": "Saved successfully.",
   "message.share-url": "This is the publicly shared URL for {target}.",
   "message.track-stats": "To track stats for {target}, place the following code in the {head} section of your website.",

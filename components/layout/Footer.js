@@ -14,7 +14,6 @@ export default function Footer() {
   return (
     <footer className="container" dir={rtlLocales.includes(locale) ? 'rtl' : 'ltr'}>
       <div className={classNames(styles.footer, 'row')}>
-        <div className="col-12 col-md-4" />
         <div className="col-12 col-md-4">
           <FormattedMessage
             id="message.powered-by"
