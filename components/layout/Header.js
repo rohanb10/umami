@@ -9,7 +9,7 @@ import ThemeButton from 'components/settings/ThemeButton';
 import UpdateNotice from 'components/common/UpdateNotice';
 import UserButton from 'components/settings/UserButton';
 import Button from 'components/common/Button';
-import Logo from 'assets/main-icon.png';
+import Logo from 'assets/snoz.png';
 import styles from './Header.module.css';
 import useLocale from 'hooks/useLocale';
 import { rtlLocales } from 'lib/lang';
