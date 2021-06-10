@@ -33,7 +33,7 @@
   font-size: var(--font-size-normal);
   font-weight: 600;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .items {
@@ -57,7 +57,7 @@
 @media only screen and (max-width: 992px) {
   .nav {
     font-size: var(--font-size-large);
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     margin: 20px 0;
   }
   .items {

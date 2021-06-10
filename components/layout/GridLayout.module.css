@@ -15,16 +15,12 @@
 
 .row > .col {
   /*border-left: 1px solid var(--gray300);*/
-  padding: 20px;
+  padding: 1rem;
 }
 
 .row > .col:first-child {
   border-left: 0;
   padding-left: 0;
-}
-
-.row > .col:last-child {
-  padding-right: 0;
 }
 
 @media only screen and (max-width: 992px) {
@@ -37,4 +33,7 @@
     border-left: 0;
     /*padding: 20px 0;*/
   }
+  /*.row > .col:empty {
+    display: none;
+  }*/
 }
