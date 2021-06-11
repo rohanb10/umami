@@ -86,7 +86,7 @@
 .percent {
   position: relative;
   width: 4rem;
-  border-left: 1px solid var(--gray500);
+  text-align: right;
   background-color: #0001;
   border-radius: .2rem;
   padding-right: .25rem;
@@ -99,7 +99,6 @@
   top: 0;
   left: 0;
   height: 30px;
-  opacity: .5;
   background: var(--snoozzYellow);
   z-index: -1;
   border-radius: .2rem;
